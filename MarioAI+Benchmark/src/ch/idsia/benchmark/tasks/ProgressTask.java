@@ -33,7 +33,7 @@ public ProgressTask(CmdLineOptions evaluationOptions)
     setOptions(evaluationOptions);
     //System.out.println("Constructor controller = " + agent);
     agent = (OurNNAgent) options.getAgent();
-    System.out.println(agent);
+    //System.out.println(agent);
     agent.setTask(this);
     agent.init();
 }

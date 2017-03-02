@@ -23,9 +23,9 @@ public class OurNNAgent extends SimpleMLPAgent implements LearningAgent
     private static float bestScore = 0;
     private BasicTask task;
     ES es;
-    int populationSize = 9;
+    int populationSize = 75;
     int generations = 350;
-    int numberOfTrials = 3; //common number of trials
+    int numberOfTrials = 1; //common number of trials
     int exhausted; // number of exhausted trials
 
     //when the agent is initialized, create a new ES with the size of the population
@@ -65,7 +65,7 @@ public class OurNNAgent extends SimpleMLPAgent implements LearningAgent
 
             if (fitn > bestScore)
             {
-            	System.out.println("Best score exceeded! Rewarding agent.");
+            	//System.out.println("Best score exceeded! Rewarding agent.");
                 bestScore = fitn;
                 bestAgent = (Agent) es.getBests()[0];
                 bestAgent.giveIntermediateReward(3);

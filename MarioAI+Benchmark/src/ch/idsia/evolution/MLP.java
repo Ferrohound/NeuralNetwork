@@ -87,7 +87,7 @@ public class MLP implements FA<double[], double[]>, Evolvable
     public void mutate()
     {
 
-        deviation += (random.nextGaussian()*deviation) + 0.201f;
+        deviation += (random.nextGaussian()*deviation);// + 0.201f;
         mutate(firstConnectionLayer);
         mutate(secondConnectionLayer);
         //mutate the deviation last of all
@@ -95,7 +95,7 @@ public class MLP implements FA<double[], double[]>, Evolvable
         //System.out.println("Standard deviation mutated to " + deviation + "\nMutations Complete");
        
          if(deviation<0.0001 && deviation > -0.0001){
-        	System.out.println("Deviation too low man. It's " + deviation);
+        	//System.out.println("Deviation too low man. It's " + deviation);
         	deviation = 0.7f;
         	deviation += (random.nextGaussian()*deviation);
         }

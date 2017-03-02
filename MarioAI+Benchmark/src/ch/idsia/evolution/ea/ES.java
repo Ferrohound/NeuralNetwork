@@ -33,7 +33,7 @@ public class ES implements EA
         for (int i = 0; i < population.length; i++)
         {
             population[i] = initial.getNewInstance();
-            System.out.println("Member number "+ i + " is " + population[i]);
+            //System.out.println("Member number "+ i + " is " + population[i]);
         }
         this.fitness = new float[populationSize];
         this.elite = populationSize / 3;

@@ -57,7 +57,7 @@ public class SimpleMLPAgent implements Agent, Evolvable
 
     public SimpleMLPAgent()
     {
-        mlp = new MLP(numberOfInputs, 10, numberOfOutputs);
+        mlp = new MLP(numberOfInputs, 15, numberOfOutputs);
         this.marioFloatPosArray = new float[10];
     }
     /*
@@ -149,7 +149,7 @@ public class SimpleMLPAgent implements Agent, Evolvable
 //                                1};
         double[] inputs = new double[] {
         		//probe(-1, -1, mergedObservation), 
-        		probe(0, -1, mergedObservation), 
+        		probe(-1, 0, mergedObservation), 
         		probe(1, -1, mergedObservation),
         		
         		marioState[0],
